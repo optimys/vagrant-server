@@ -68,7 +68,7 @@ Vagrant.configure(2) do |config|
   #   sudo apt-get update
   #   sudo apt-get install -y apache2
   # SHELL
-  config.vm.network "forwarded_port", guest: 80, host: 8080
+  config.vm.network "forwarded_port", guest: 80, host: 8888
   config.vm.synced_folder "./share/", "/var/www/html"
   config.vm.network "public_network", ip: "192.168.0.71"
   config.vm.provision :shell, path: "bootstrap.sh"
